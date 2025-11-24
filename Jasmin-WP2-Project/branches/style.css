@@ -1,0 +1,37 @@
+﻿/* Light mode theme for the branches area */
+
+body {
+    background-color: rgb(240,240,240); /* light page background */
+    color: #212529; /* default dark text */
+    font-family: 'Inter', sans-serif;
+    padding-top: 66px; /* Space for the sticky navbar */
+}
+
+/* Navbar styling for light mode */
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 25px 15px;
+    border-bottom: 1px solid #e6e9ee; /* subtle light border */
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.06);
+}
+
+.nav-link {
+    color: #0d6efd !important; /* blue links for visibility */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #f1f3f5; /* soft hover background */
+    color: #0b5ed7 !important;
+}
+
+/* Container for the main content to leave room for the Master Page layout */
+.main-content-placeholder {
+    min-height: calc(100vh - 70px); /* Ensures content pushes the footer if we add one */
+    padding: 1.5rem 0;
+}

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Jasmin_WP2_Project.branches.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Dashboard</title>
+    
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/branches/style.css" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+            <div class="container-fluid container-lg">
+                <a class="navbar-brand text-light" href="#">E-Dash</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Add Branch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 5</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text text-secondary">
+                        Welcome, <asp:Label ID="lblUsername" Text="" runat="server" /> <asp:Label ID="lblUserRole" CssClass="badge bg-secondary" Text="" runat="server" />
+                    </span>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main-content-placeholder">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </form>
+</body>
+</html>

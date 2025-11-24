@@ -1,0 +1,91 @@
+﻿/* Light mode theme for the login page */
+
+/* Page background and typography */
+body {
+    background-color: rgb(240,240,240); /* light page background */
+    color: #212529; /* default text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Login card */
+.login-card {
+    background-color: #ffffff; /* card background: white */
+    border: 1px solid #e6e9ee; /* light border for separation */
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.login-card h1 {
+    color: #111827; /* strong heading color */
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Form labels */
+.form-label,
+.text-light-emphasis {
+    color: #495057; /* muted dark for labels */
+}
+
+/* Inputs */
+.form-control {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    color: #212529;
+    height: 48px;
+    border-radius: 0.5rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #0d6efd; /* blue focus */
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.12);
+    color: #212529;
+    outline: none;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+    font-weight: 600;
+    height: 48px;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Forgot password link */
+.forgot-password a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password a:hover {
+    color: #0b5ed7;
+    text-decoration: underline;
+}
