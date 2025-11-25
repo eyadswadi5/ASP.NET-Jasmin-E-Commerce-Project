@@ -77,7 +77,7 @@ namespace Jasmin_WP2_Project
 
                         FormsAuthentication.RedirectFromLoginPage(username, false);
 
-                        Response.Redirect("~/branches/AddBranches.aspx");
+                        Response.Redirect("~/branches/Home.aspx");
                     }
                 }
                 else

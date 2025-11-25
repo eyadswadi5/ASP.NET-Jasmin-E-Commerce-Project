@@ -15,22 +15,22 @@ namespace Jasmin_WP2_Project.branches
     {
 
         /// <summary>
-        /// MessageLabel control.
+        /// lblStatusMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MessageLabel;
+        protected global::System.Web.UI.WebControls.Label lblStatusMessage;
 
         /// <summary>
-        /// BranchNameTextBox control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BranchNameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
         /// NameValidator control.
@@ -42,13 +42,13 @@ namespace Jasmin_WP2_Project.branches
         protected global::System.Web.UI.WebControls.RequiredFieldValidator NameValidator;
 
         /// <summary>
-        /// CityTextBox control.
+        /// txtCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CityTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtCity;
 
         /// <summary>
         /// CityValidator control.
@@ -60,13 +60,13 @@ namespace Jasmin_WP2_Project.branches
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CityValidator;
 
         /// <summary>
-        /// AddressTextBox control.
+        /// txtAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AddressTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtAddress;
 
         /// <summary>
         /// AddressValidator control.
@@ -78,13 +78,13 @@ namespace Jasmin_WP2_Project.branches
         protected global::System.Web.UI.WebControls.RequiredFieldValidator AddressValidator;
 
         /// <summary>
-        /// PhoneTextBox control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PhoneTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
         /// PhoneValidator control.
@@ -96,13 +96,22 @@ namespace Jasmin_WP2_Project.branches
         protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneValidator;
 
         /// <summary>
-        /// fu_prochoure control.
+        /// fileUploadBrochure control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_prochoure;
+        protected global::System.Web.UI.WebControls.FileUpload fileUploadBrochure;
+
+        /// <summary>
+        /// lblFileUploadMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFileUploadMessage;
 
         /// <summary>
         /// ddlManager control.
@@ -130,6 +139,15 @@ namespace Jasmin_WP2_Project.branches
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ManagerIdValidator;
+
+        /// <summary>
+        /// lblMangerStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMangerStatus;
 
         /// <summary>
         /// SubmitButton control.
