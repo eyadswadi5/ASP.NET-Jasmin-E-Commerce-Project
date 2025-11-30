@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -57,5 +59,26 @@ namespace Jasmin_WP2_Project.branches
         {
 
         }
+
+        protected void BranchesGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteStore")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+
+                string query = "DELETE FROM stores WHERE id = @id";
+
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+
+                BranchesGridView.DataBind();
+            }
+        }
+
     }
 }

@@ -23,6 +23,7 @@
             
             <asp:GridView ID="BranchesGridView" runat="server" AutoGenerateColumns="False"
                 DataKeyNames="id" OnRowDataBound="BranchesGridView_RowDataBound"
+                OnRowCommand="BranchesGridView_RowCommand"
                 CssClass="table table-dark table-hover mb-0"
                 HeaderStyle-CssClass="text-light-emphasis text-uppercase"
                 RowStyle-CssClass="text-secondary"
@@ -41,6 +42,29 @@
                     <asp:BoundField DataField="phone" HeaderText="phone" ItemStyle-Width="15%" SortExpression="phone" />
                     
                     <asp:BoundField DataField="ManagerName" HeaderText="ManagerName" ItemStyle-Width="10%" ReadOnly="True" SortExpression="ManagerName" />
+                
+                
+                    <asp:TemplateField HeaderText="Actions" ItemStyle-Width="12%">
+                        <ItemTemplate>
+
+                            <asp:HyperLink 
+                                ID="LnkUpdateStore"
+                                runat="server"
+                                Text="Edit"
+                                CssClass="btn btn-sm btn-primary"
+                                NavigateUrl='<%# "~/branches/EditBranch.aspx?id=" + Eval("id") %>' />
+
+                            <asp:LinkButton 
+                                ID="btnDeleteStore" 
+                                runat="server" 
+                                Text="Delete" 
+                                CssClass="btn btn-sm btn-danger"
+                                CommandName="DeleteStore"
+                                CommandArgument='<%# Eval("id") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this store?');" />
+
+                        </ItemTemplate>
+                    </asp:TemplateField>
 
                 </Columns>
 
@@ -61,6 +85,5 @@
   FROM [STORE_DB].[dbo].[stores] JOIN personal_information ON stores.manager_id = personal_information.user_id;
 "></asp:SqlDataSource>
         </div>
-        
     </div>
 </asp:Content>
