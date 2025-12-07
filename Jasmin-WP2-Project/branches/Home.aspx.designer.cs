@@ -33,6 +33,15 @@ namespace Jasmin_WP2_Project.branches
         protected global::System.Web.UI.WebControls.Button SearchButton;
 
         /// <summary>
+        /// lblErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblErrorMessage;
+
+        /// <summary>
         /// BranchesGridView control.
         /// </summary>
         /// <remarks>
@@ -49,5 +58,19 @@ namespace Jasmin_WP2_Project.branches
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource Stores_SQL_DS;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Jasmin_WP2_Project.branches.MasterPage Master
+        {
+            get
+            {
+                return ((Jasmin_WP2_Project.branches.MasterPage)(base.Master));
+            }
+        }
     }
 }

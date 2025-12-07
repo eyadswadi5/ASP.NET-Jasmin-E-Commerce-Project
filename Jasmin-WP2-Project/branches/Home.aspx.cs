@@ -66,12 +66,32 @@ namespace Jasmin_WP2_Project.branches
             {
                 int id = Convert.ToInt32(e.CommandArgument);
 
-                string query = "DELETE FROM stores WHERE id = @id";
-
+                string query = "SELECT COUNT(*) FROM warehouse_store WHERE store_id = @id";
+                
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString))
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        lblErrorMessage.InnerText = "Cannot delete store. There are warehouses associated with this store.";
+                        return;
+                    }
+
+                    query = "SELECT COUNT(*) FROM product_store WHERE store_id = @id";
+                    cmd.CommandText = query;
+                    count = (int)cmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        lblErrorMessage.InnerText = "Cannot delete store. There are products associated with this store.";
+                        return;
+                    }
+
+                    query = "DELETE FROM stores WHERE id = @id";
+                    cmd.CommandText = query;
+
                     conn.Open();
                     cmd.ExecuteNonQuery();
                 }

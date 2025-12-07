@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/branches/MasterPage.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Jasmin_WP2_Project.branches.Home" %>
+<%@ MasterType VirtualPath="~/branches/MasterPage.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -18,6 +19,7 @@
     <div class="card" style="background-color: #161b22; border: 1px solid #30363d;">
         <div class="card-header border-bottom border-secondary-subtle py-3">
             <h5 class="text-light mb-0">All Branches</h5>
+            <p runat="server" class="text-danger" id="lblErrorMessage"></p>
         </div>
         <div class="card-body p-0">
             
