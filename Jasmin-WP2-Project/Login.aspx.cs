@@ -68,12 +68,8 @@ namespace Jasmin_WP2_Project
                         reader.Read();
 
                         Session["Role"] = reader["role_type"].ToString();
-                        Session["Email"] = reader["email"].ToString();
                         Session["FirstName"] = reader["first_name"].ToString();
                         Session["LastName"] = reader["last_name"].ToString();
-                        Session["Phone"] = reader["phone"].ToString();
-                        Session["Gender"] = reader["gender"].ToString();
-                        Session["Photo_url"] = reader["photo_url"].ToString();
 
                         FormsAuthentication.RedirectFromLoginPage(username, false);
 

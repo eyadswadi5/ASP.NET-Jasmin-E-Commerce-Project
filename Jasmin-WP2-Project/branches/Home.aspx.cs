@@ -64,6 +64,13 @@ namespace Jasmin_WP2_Project.branches
         {
             if (e.CommandName == "DeleteStore")
             {
+
+                if (Session["Role"].ToString() != "manager")
+                {
+                    lblErrorMessage.InnerText = "You do not have permission to delete stores.";
+                    return;
+                }
+
                 int id = Convert.ToInt32(e.CommandArgument);
 
                 string query = "SELECT COUNT(*) FROM warehouse_store WHERE store_id = @id";

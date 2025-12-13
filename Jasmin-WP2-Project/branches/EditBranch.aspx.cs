@@ -15,6 +15,9 @@ namespace Jasmin_WP2_Project.branches
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Role"].ToString() != "employee")
+                Response.Redirect("~/branches/Home.aspx");
+
             if (IsPostBack)
             {
                 return;
