@@ -35,32 +35,39 @@
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="id" ItemStyle-Width="5%" ItemStyle-CssClass="fw-bold" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                     
-                    <asp:BoundField DataField="name" HeaderText="name" ItemStyle-Width="25%" SortExpression="name" />
+                    <asp:BoundField DataField="name" HeaderText="name" ItemStyle-Width="15%" SortExpression="name" />
                     
                     <asp:BoundField DataField="city" HeaderText="city" ItemStyle-Width="15%" SortExpression="city" />
                     
-                    <asp:BoundField DataField="address" HeaderText="address" ItemStyle-Width="30%" SortExpression="address" />
+                    <asp:BoundField DataField="address" HeaderText="address" ItemStyle-Width="20%" SortExpression="address" />
                     
                     <asp:BoundField DataField="phone" HeaderText="phone" ItemStyle-Width="15%" SortExpression="phone" />
                     
                     <asp:BoundField DataField="ManagerName" HeaderText="ManagerName" ItemStyle-Width="10%" ReadOnly="True" SortExpression="ManagerName" />
                 
                 
-                    <asp:TemplateField HeaderText="Actions" ItemStyle-Width="12%">
+                    <asp:TemplateField HeaderText="Actions" ItemStyle-Width="20%">
                         <ItemTemplate>
+
+                            <asp:HyperLink 
+                                ID="LnkViewStore"
+                                runat="server"
+                                Text="View"
+                                CssClass="btn btn-sm btn-secondary text-light"
+                                NavigateUrl='<%# "~/branches/ViewBranch.aspx?id=" + Eval("id") %>' />
 
                             <asp:HyperLink 
                                 ID="LnkUpdateStore"
                                 runat="server"
                                 Text="Edit"
-                                CssClass="btn btn-sm btn-primary"
+                                CssClass="btn btn-sm btn-primary text-light"
                                 NavigateUrl='<%# "~/branches/EditBranch.aspx?id=" + Eval("id") %>' />
 
                             <asp:LinkButton 
                                 ID="btnDeleteStore" 
                                 runat="server" 
                                 Text="Delete" 
-                                CssClass="btn btn-sm btn-danger"
+                                CssClass="btn btn-sm btn-danger text-light"
                                 CommandName="DeleteStore"
                                 CommandArgument='<%# Eval("id") %>'
                                 OnClientClick="return confirm('Are you sure you want to delete this store?');" />

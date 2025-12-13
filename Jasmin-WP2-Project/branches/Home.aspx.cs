@@ -92,7 +92,6 @@ namespace Jasmin_WP2_Project.branches
                     query = "DELETE FROM stores WHERE id = @id";
                     cmd.CommandText = query;
 
-                    conn.Open();
                     cmd.ExecuteNonQuery();
                 }
 

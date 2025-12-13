@@ -81,7 +81,7 @@ namespace Jasmin_WP2_Project.branches
                 string filePath = string.Empty;
                 if (!string.IsNullOrEmpty(uploadedFileName))
                 {
-                    filePath = "/storage/files/brochures/branches/" + uploadedFileName;
+                    filePath = "/storage/file/brochures/" + uploadedFileName;
                 }
                 cmd.Parameters.AddWithValue("@File_url", filePath);
 

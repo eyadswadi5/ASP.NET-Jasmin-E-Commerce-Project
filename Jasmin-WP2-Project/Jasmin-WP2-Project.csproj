@@ -71,6 +71,7 @@
     <Content Include="branches\AddBranches.aspx" />
     <Content Include="branches\Home.aspx" />
     <Content Include="branches\style.css" />
+    <Content Include="branches\ViewBranch.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="styles\style.css" />
     <Content Include="Web.config" />
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="branches\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="branches\ViewBranch.aspx.cs">
+      <DependentUpon>ViewBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="branches\ViewBranch.aspx.designer.cs">
+      <DependentUpon>ViewBranch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
