@@ -32,7 +32,7 @@
                             <asp:HyperLink ID="HyperLink1" class="nav-link" NavigateUrl="~/branches/AddBranches.aspx" runat="server">Add Branch</asp:HyperLink>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link 2</a>
+                            <asp:HyperLink ID="HyperLink3" class="nav-link" NavigateUrl="~/branches/AssignEmployees.aspx" runat="server">Assign Employees</asp:HyperLink>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link 3</a>

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="branches\AssignEmployees.aspx" />
     <Content Include="branches\EditBranch.aspx" />
     <Content Include="branches\AddBranches.aspx" />
     <Content Include="branches\Home.aspx" />
@@ -77,6 +78,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="branches\AssignEmployees.aspx.cs">
+      <DependentUpon>AssignEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="branches\AssignEmployees.aspx.designer.cs">
+      <DependentUpon>AssignEmployees.aspx</DependentUpon>
+    </Compile>
     <Compile Include="branches\EditBranch.aspx.cs">
       <DependentUpon>EditBranch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -11,79 +11,93 @@ namespace Jasmin_WP2_Project.branches
 {
 
 
-    public partial class MasterPage
+    public partial class AssignEmployees
     {
 
         /// <summary>
-        /// head control.
+        /// lblStatusMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lblStatusMessage;
 
         /// <summary>
-        /// form1 control.
+        /// ddlBranches control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBranches;
 
         /// <summary>
-        /// HyperLink2 control.
+        /// Branches_SQL_DS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.SqlDataSource Branches_SQL_DS;
 
         /// <summary>
-        /// HyperLink1 control.
+        /// BranchIdValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator BranchIdValidator;
 
         /// <summary>
-        /// HyperLink3 control.
+        /// lblBranchStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.Label lblBranchStatus;
 
         /// <summary>
-        /// lblUsername control.
+        /// ChkBxEmps control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsername;
+        protected global::System.Web.UI.WebControls.CheckBoxList ChkBxEmps;
 
         /// <summary>
-        /// lblUserRole control.
+        /// UnhiredEmployees control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserRole;
+        protected global::System.Web.UI.WebControls.SqlDataSource UnhiredEmployees;
 
         /// <summary>
-        /// MainContent control.
+        /// SubmitButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button SubmitButton;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Jasmin_WP2_Project.branches.MasterPage Master
+        {
+            get
+            {
+                return ((Jasmin_WP2_Project.branches.MasterPage)(base.Master));
+            }
+        }
     }
 }
