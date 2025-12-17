@@ -50,6 +50,33 @@
                             <a id="LnkDownloadBrochure" href="#" runat="server" class="btn btn-outline-primary px-4" download="">Download Brochure</a>
                         </div>
                     </div>
+
+                    <asp:GridView ID="EmployeesGridView" runat="server" AutoGenerateColumns="False"
+                        DataKeyNames="Employee"
+                        CssClass="table table-dark table-hover mb-0"
+                        HeaderStyle-CssClass="text-light-emphasis text-uppercase"
+                        RowStyle-CssClass="text-secondary"
+                        AlternatingRowStyle-CssClass="table-dark-alt"
+                        EmptyDataText="No Employees found in this branch." DataSourceID="Employees_SQL_DS">
+
+                        <Columns>
+                            <asp:BoundField DataField="Employee" HeaderText="Employee" ItemStyle-Width="5%" ItemStyle-CssClass="fw-bold" InsertVisible="False" ReadOnly="True" SortExpression="Employee" />
+
+                            <asp:BoundField DataField="phone" HeaderText="Phone" ItemStyle-Width="15%" SortExpression="Phone" />
+
+                            <asp:BoundField DataField="email" HeaderText="Email" ItemStyle-Width="15%" SortExpression="Email" />
+                        </Columns>
+
+                        <HeaderStyle BackColor="#161b22" ForeColor="#c9d1d9" Font-Bold="True" HorizontalAlign="Left" />
+                        <RowStyle BackColor="#161b22" />
+                        <AlternatingRowStyle BackColor="#101317" />
+                        <SelectedRowStyle BackColor="#2a6080" Font-Bold="True" ForeColor="White" />
+                        <FooterStyle BackColor="#30363d" ForeColor="White" Font-Bold="True" />
+                        <PagerStyle BackColor="#161b22" ForeColor="#c9d1d9" HorizontalAlign="Center" />
+
+                    </asp:GridView>
+                               
+                    <asp:SqlDataSource runat="server" ID="Employees_SQL_DS" ConnectionString="<%$ ConnectionStrings:DBConnectionString %>"></asp:SqlDataSource>
                 </div>
             </div>
         </div>

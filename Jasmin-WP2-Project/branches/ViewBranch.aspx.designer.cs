@@ -94,5 +94,23 @@ namespace Jasmin_WP2_Project.branches
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor LnkDownloadBrochure;
+
+        /// <summary>
+        /// EmployeesGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView EmployeesGridView;
+
+        /// <summary>
+        /// Employees_SQL_DS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource Employees_SQL_DS;
     }
 }

@@ -61,6 +61,15 @@ namespace Jasmin_WP2_Project.branches
                 }
 
                 reader.Close();
+
+                query = "SELECT (first_name + ' ' + last_name) as Employee, phone, email FROM personal_information where store_id = @store_id";
+                Employees_SQL_DS.SelectCommand = query;
+                Employees_SQL_DS.SelectParameters.Clear();
+                Employees_SQL_DS.SelectParameters.Add("store_id", branchId.ToString());
+
+                EmployeesGridView.DataBind();
+               
+
             }
         }
     }
